@@ -1,0 +1,44 @@
+{
+  "name": "webpack5-p5-boilerplate",
+  "version": "1.0.0",
+  "description": "Plain webpack 5 Boilerplate with Babel, SASS and p5.js on board",
+  "author": "polyclick",
+  "license": "MIT",
+  "homepage": "https://github.com/polyclick/webpack5-p5-boilerplate",
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "scripts": {
+    "dev": "webpack serve --progress --env dev --config webpack.dev.js",
+    "build": "webpack --progress --env prod --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://polyclick@github.com/polyclick/webpack5-p5-boilerplate.git"
+  },
+  "dependencies": {
+    "p5": "^1.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.8",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/preset-env": "7.15.8",
+    "babel-loader": "8.2.2",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "9.0.1",
+    "css-loader": "6.4.0",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.2",
+    "image-minimizer-webpack-plugin": "^2.2.0",
+    "imagemin-svgo": "^10.0.0",
+    "node-sass": "6.0.1",
+    "raw-loader": "^4.0.2",
+    "sass-loader": "12.2.0",
+    "style-loader": "3.3.0",
+    "url-loader": "4.1.1",
+    "webpack": "5.58.1",
+    "webpack-cli": "4.9.0",
+    "webpack-dev-server": "4.3.1",
+    "webpack-merge": "5.8.0"
+  }
+}

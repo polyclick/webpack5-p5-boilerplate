@@ -1,0 +1,27 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+}
+
+// Vertical & horizontally centered canvas element
+canvas {
+  bottom: 0;
+  left: 0;
+  margin:auto;
+  position: absolute;
+  right: 0;
+  top:0;
+}
