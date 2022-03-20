@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
@@ -29,41 +28,11 @@ module.exports = (env) => {
 
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'index.ejs')
-      }),
-
-      new ImageMinimizerPlugin({
-        minimizerOptions: {
-          plugins: [
-            // SVGO options: "https://github.com/svg/svgo#what-it-can-do"
-            [
-              'imagemin-svgo',
-              {
-                plugins: [
-                  {
-                    removeViewBox: false,
-                    removeXMLNS: true,
-                  },
-                ],
-              },
-            ],
-          ],
-        },
-      }),
+      })
     ],
 
     module: {
       rules: [
-        // BABEL
-        {
-          test: /\.m?js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              compact: true,
-            },
-          },
-        },
 
         // STYLES
         {
